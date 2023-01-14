@@ -9,6 +9,17 @@ public class ExecutorController : IExecutorController
     public static Dictionary<string, Parameter> InstallParameters = new();
     public static Dictionary<string, Parameter> UpdateParameters = new();
 
+    public ExecutorController(dynamic executorConfiguration)
+    {
+        throw new NotImplementedException();
+    }
+
+    public ExecutorController(dynamic computedSimpleSettings,
+        dynamic executorConfigurationBase)
+    {
+        throw new NotImplementedException();
+    }
+
     public async Task Run(ISubject<ProgressInfo>? progress = null)
     {
         throw new NotImplementedException();
