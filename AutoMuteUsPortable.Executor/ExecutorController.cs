@@ -1,5 +1,6 @@
 ﻿using System.Reactive.Subjects;
 using AutoMuteUsPortable.Shared.Controller.Executor;
+using AutoMuteUsPortable.Shared.Entity.ExecutorConfigurationBaseNS;
 using AutoMuteUsPortable.Shared.Entity.ProgressInfo;
 
 namespace AutoMuteUsPortable.Executor;
@@ -35,23 +36,27 @@ public class ExecutorController : ExecutorControllerBase
         throw new NotImplementedException();
     }
 
-    public override async Task Install(Dictionary<string, string> parameters, ISubject<ProgressInfo>? progress = null)
+    public override async Task Install(Dictionary<string, string> parameters,
+        Dictionary<ExecutorType, ExecutorControllerBase> executors, ISubject<ProgressInfo>? progress = null)
     {
         throw new NotImplementedException();
     }
 
-    public override async Task Update(Dictionary<string, string> parameters, ISubject<ProgressInfo>? progress = null)
+    public override async Task Update(Dictionary<string, string> parameters,
+        Dictionary<ExecutorType, ExecutorControllerBase> executors, ISubject<ProgressInfo>? progress = null)
     {
         throw new NotImplementedException();
     }
 
     public override async Task InstallBySimpleSettings(object simpleSettings, object executorConfigurationBase,
+        Dictionary<ExecutorType, ExecutorControllerBase> executors,
         ISubject<ProgressInfo>? progress = null)
     {
         throw new NotImplementedException();
     }
 
     public override async Task UpdateBySimpleSettings(object simpleSettings, object executorConfigurationBase,
+        Dictionary<ExecutorType, ExecutorControllerBase> executors,
         ISubject<ProgressInfo>? progress = null)
     {
         throw new NotImplementedException();
