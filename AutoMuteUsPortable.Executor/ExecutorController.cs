@@ -4,54 +4,54 @@ using AutoMuteUsPortable.Shared.Entity.ProgressInfo;
 
 namespace AutoMuteUsPortable.Executor;
 
-public class ExecutorController : IExecutorController
+public class ExecutorController : ExecutorControllerBase
 {
-    public static Dictionary<string, Parameter> InstallParameters = new();
-    public static Dictionary<string, Parameter> UpdateParameters = new();
+    public new static Dictionary<string, Parameter> InstallParameters = new();
+    public new static Dictionary<string, Parameter> UpdateParameters = new();
 
-    public ExecutorController(dynamic executorConfiguration)
+    public ExecutorController(object executorConfiguration) : base(executorConfiguration)
     {
         throw new NotImplementedException();
     }
 
-    public ExecutorController(dynamic computedSimpleSettings,
-        dynamic executorConfigurationBase)
+    public ExecutorController(object computedSimpleSettings,
+        object executorConfigurationBase) : base(computedSimpleSettings, executorConfigurationBase)
     {
         throw new NotImplementedException();
     }
 
-    public async Task Run(ISubject<ProgressInfo>? progress = null)
+    public override async Task Run(ISubject<ProgressInfo>? progress = null)
     {
         throw new NotImplementedException();
     }
 
-    public async Task Stop(ISubject<ProgressInfo>? progress = null)
+    public override async Task Stop(ISubject<ProgressInfo>? progress = null)
     {
         throw new NotImplementedException();
     }
 
-    public async Task Restart(ISubject<ProgressInfo>? progress = null)
+    public override async Task Restart(ISubject<ProgressInfo>? progress = null)
     {
         throw new NotImplementedException();
     }
 
-    public async Task Install(Dictionary<string, string> parameters, ISubject<ProgressInfo>? progress = null)
+    public override async Task Install(Dictionary<string, string> parameters, ISubject<ProgressInfo>? progress = null)
     {
         throw new NotImplementedException();
     }
 
-    public async Task Update(Dictionary<string, string> parameters, ISubject<ProgressInfo>? progress = null)
+    public override async Task Update(Dictionary<string, string> parameters, ISubject<ProgressInfo>? progress = null)
     {
         throw new NotImplementedException();
     }
 
-    public async Task InstallBySimpleSettings(dynamic simpleSettings, dynamic executorConfigurationBase,
+    public override async Task InstallBySimpleSettings(object simpleSettings, object executorConfigurationBase,
         ISubject<ProgressInfo>? progress = null)
     {
         throw new NotImplementedException();
     }
 
-    public async Task UpdateBySimpleSettings(dynamic simpleSettings, dynamic executorConfigurationBase,
+    public override async Task UpdateBySimpleSettings(object simpleSettings, object executorConfigurationBase,
         ISubject<ProgressInfo>? progress = null)
     {
         throw new NotImplementedException();
