@@ -1,15 +1,12 @@
 ﻿using System.Reactive.Subjects;
 using AutoMuteUsPortable.Shared.Controller.Executor;
 using AutoMuteUsPortable.Shared.Entity.ExecutorConfigurationBaseNS;
-using AutoMuteUsPortable.Shared.Entity.ExecutorConfigurationNS;
 using AutoMuteUsPortable.Shared.Entity.ProgressInfo;
 
 namespace AutoMuteUsPortable.Executor;
 
 public class ExecutorController : ExecutorControllerBase
 {
-    public new readonly ExecutorConfiguration ExecutorConfiguration;
-
     public ExecutorController(object executorConfiguration) : base(executorConfiguration)
     {
         throw new NotImplementedException();
