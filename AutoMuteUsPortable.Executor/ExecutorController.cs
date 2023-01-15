@@ -10,7 +10,7 @@ public class ExecutorController : ExecutorControllerBase
 {
     public new static Dictionary<string, Parameter> InstallParameters = new();
     public new static Dictionary<string, Parameter> UpdateParameters = new();
-    public new readonly ExecutorConfiguration executorConfiguration;
+    public readonly ExecutorConfiguration ExecutorConfiguration;
 
     public ExecutorController(object executorConfiguration) : base(executorConfiguration)
     {
