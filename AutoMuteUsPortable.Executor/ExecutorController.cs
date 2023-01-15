@@ -43,7 +43,8 @@ public class ExecutorController : ExecutorControllerBase
     }
 
     public override async Task Update(
-        Dictionary<ExecutorType, ExecutorControllerBase> executors, ISubject<ProgressInfo>? progress = null)
+        Dictionary<ExecutorType, ExecutorControllerBase> executors, object oldExecutorConfiguration,
+        ISubject<ProgressInfo>? progress = null)
     {
         throw new NotImplementedException();
     }
