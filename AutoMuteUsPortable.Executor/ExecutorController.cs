@@ -8,9 +8,7 @@ namespace AutoMuteUsPortable.Executor;
 
 public class ExecutorController : ExecutorControllerBase
 {
-    public new static Dictionary<string, Parameter> InstallParameters = new();
-    public new static Dictionary<string, Parameter> UpdateParameters = new();
-    public readonly ExecutorConfiguration ExecutorConfiguration;
+    public new readonly ExecutorConfiguration ExecutorConfiguration;
 
     public ExecutorController(object executorConfiguration) : base(executorConfiguration)
     {
@@ -38,28 +36,14 @@ public class ExecutorController : ExecutorControllerBase
         throw new NotImplementedException();
     }
 
-    public override async Task Install(Dictionary<string, string> parameters,
+    public override async Task Install(
         Dictionary<ExecutorType, ExecutorControllerBase> executors, ISubject<ProgressInfo>? progress = null)
     {
         throw new NotImplementedException();
     }
 
-    public override async Task Update(Dictionary<string, string> parameters,
+    public override async Task Update(
         Dictionary<ExecutorType, ExecutorControllerBase> executors, ISubject<ProgressInfo>? progress = null)
-    {
-        throw new NotImplementedException();
-    }
-
-    public override async Task InstallBySimpleSettings(object simpleSettings, object executorConfigurationBase,
-        Dictionary<ExecutorType, ExecutorControllerBase> executors,
-        ISubject<ProgressInfo>? progress = null)
-    {
-        throw new NotImplementedException();
-    }
-
-    public override async Task UpdateBySimpleSettings(object simpleSettings, object executorConfigurationBase,
-        Dictionary<ExecutorType, ExecutorControllerBase> executors,
-        ISubject<ProgressInfo>? progress = null)
     {
         throw new NotImplementedException();
     }
